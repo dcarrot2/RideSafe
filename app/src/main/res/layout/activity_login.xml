@@ -21,7 +21,6 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
-
     <TextView
         android:text="Ridr"
         android:paddingTop="400dp"
