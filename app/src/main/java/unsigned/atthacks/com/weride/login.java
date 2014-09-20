@@ -1,5 +1,6 @@
 package unsigned.atthacks.com.weride;
 
+import android.app.Activity;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -15,7 +16,7 @@ import android.content.Intent;
 
 
 
-public class login extends ActionBarActivity {
+public class login extends Activity {
 
     private ImageButton login;
 
@@ -42,9 +43,7 @@ public class login extends ActionBarActivity {
 
             }
         });
-
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
