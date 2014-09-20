@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "unsigned.atthacks.com.weride"
-        minSdkVersion 10
+        minSdkVersion 14
         targetSdkVersion 20
         versionCode 1
         versionName "1.0"

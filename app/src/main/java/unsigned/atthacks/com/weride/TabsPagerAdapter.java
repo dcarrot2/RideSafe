@@ -27,4 +27,18 @@ public class TabsPagerAdapter extends FragmentPagerAdapter {
     public int getCount() {
         return 1;
     }
+
+    @Override
+    public CharSequence getPageTitle(int position) {
+        String title = new String();
+        if(position == 0)
+        {
+            return "Track Route";
+        }
+        if(position == 1)
+        {
+            return "Recently Posted Challenges";
+        }
+        return null;
+    }
 }

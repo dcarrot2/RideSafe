@@ -17,29 +17,15 @@ import android.graphics.Typeface;
 import android.widget.TextView;
 import unsigned.atthacks.com.weride.R;
 
-public class MainActivity extends FragmentActivity implements ActionBar.TabListener {
+public class MainActivity extends FragmentActivity{
 
-    private android.app.ActionBar actionBar;
+
     private TabsPagerAdapter mAdapter;
     private ViewPager viewPager;
     private Button startRoute;
 
     private String[] tabs = {"Track Route", "Challenge"};
 
-    @Override
-    public void onTabSelected(Tab tab, FragmentTransaction fragmentTransaction) {
-
-    }
-
-    @Override
-    public void onTabUnselected(Tab tab, FragmentTransaction fragmentTransaction) {
-
-    }
-
-    @Override
-    public void onTabReselected(Tab tab, FragmentTransaction fragmentTransaction) {
-
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +34,14 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 
         // Initialization
         viewPager = (ViewPager) findViewById(R.id.pager);
-        actionBar = getActionBar();
+
+        mAdapter = new TabsPagerAdapter(getSupportFragmentManager());
+
+        viewPager.setAdapter(mAdapter);
+
+        //actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD)
+
+
 
 
 
