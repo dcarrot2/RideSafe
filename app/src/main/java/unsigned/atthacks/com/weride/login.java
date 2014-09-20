@@ -4,6 +4,8 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.graphics.Typeface;
+import android.widget.TextView;
 
 
 public class login extends ActionBarActivity {
@@ -13,6 +15,13 @@ public class login extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        //callinf textView by id
+        TextView titleTxt = (TextView) findViewById(R.id.ridr);
+
+        // Loading Font Face
+        Typeface riderTitle = Typeface.createFromAsset(getAssets(), "fonts/Airstream.ttf");
+
+        titleTxt.setTypeface(riderTitle);
     }
 
 
