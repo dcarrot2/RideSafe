@@ -42,9 +42,7 @@ public class login extends ActionBarActivity {
 
             }
         });
-
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
