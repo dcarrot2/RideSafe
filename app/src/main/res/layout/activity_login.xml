@@ -21,6 +21,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
+<<<<<<< HEAD
     <TextView
         android:text="Ridr"
         android:paddingTop="400dp"
@@ -35,4 +36,6 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
+=======
+>>>>>>> 5c050944821b09a7e4b0f9dbeced52609485d022
 </RelativeLayout>

@@ -4,11 +4,20 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+
 import android.graphics.Typeface;
 import android.widget.TextView;
 
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.content.Intent;
+
+
 
 public class login extends ActionBarActivity {
+
+    private ImageButton login;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +31,18 @@ public class login extends ActionBarActivity {
         Typeface riderTitle = Typeface.createFromAsset(getAssets(), "fonts/Airstream.ttf");
 
         titleTxt.setTypeface(riderTitle);
+
+        login = (ImageButton) findViewById(R.id.fbLogin);
+
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent launch = new Intent(login.getContext(), MainActivity.class);
+                startActivity(launch);
+
+            }
+        });
+
     }
 
 
