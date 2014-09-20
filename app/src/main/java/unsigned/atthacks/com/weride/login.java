@@ -13,7 +13,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.content.Intent;
+import android.widget.TextView;
 
+import com.facebook.*;
+import com.facebook.model.*;
+import android.util.Log;
+
+import org.w3c.dom.Text;
 
 
 public class login extends Activity {
@@ -22,6 +28,32 @@ public class login extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_login);
+
+        Session.openActiveSession(this, true, new Session.StatusCallback() {
+            @Override
+            public void call(Session session, SessionState state, Exception exception) {
+
+                if(session.isOpened()){
+
+                    Request.newMeRequest(session, new Request.GraphUserCallback() {
+                        @Override
+                        public void onCompleted(GraphUser user, Response response) {
+                            if(user != null){
+                                Log.i("SUCESSS", "Success" + user.getName());
+                            }
+                        }
+                    }).executeAsync();
+                }
+
+            }
+        });
+
+        // start Facebook login
+
+        /*
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
@@ -43,6 +75,13 @@ public class login extends Activity {
 
             }
         });
+        */
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        Session.getActiveSession().onActivityResult(this, requestCode, resultCode, data);
     }
 
     @Override

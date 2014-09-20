@@ -10,5 +10,6 @@
     <string name="title_activity_summary">SummaryActivity</string>
     <string name="title_activity_leader_board">LeaderBoard</string>
     <string name="title_activity_recording_screen">RecordingScreen</string>
+    <string name="app_id">712303035512371</string>
 
 </resources>

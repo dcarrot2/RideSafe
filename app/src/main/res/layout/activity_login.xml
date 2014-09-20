@@ -10,17 +10,11 @@
     android:theme="@android:style/Theme.NoTitleBar"
     android:background="@drawable/bikes">
 
-    <ImageButton
-        android:layout_width="wrap_content"
+    <com.facebook.widget.LoginButton
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/fbLogin"
-        android:background= "@drawable/fblogin"
-        android:verticalScrollbarPosition="defaultPosition"
-        android:gravity="center"
-        android:paddingBottom="2px"
-        android:layout_marginBottom="138dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:id="@+id/facebook_login_button"
+        />
 
     <TextView
         android:text="Ridr"
