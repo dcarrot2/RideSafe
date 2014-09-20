@@ -6,19 +6,20 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.content.Intent;
 
 
 public class login extends ActionBarActivity {
 
-    private Button login;
+    private ImageButton login;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        login = (Button) findViewById(R.id.button_login);
+        login = (ImageButton) findViewById(R.id.fbLogin);
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
