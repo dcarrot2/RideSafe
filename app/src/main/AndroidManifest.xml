@@ -16,6 +16,35 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".SingUp"
+            android:label="@string/title_activity_sing_up" >
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".RecordingActivity"
+            android:label="@string/title_activity_recording" >
+        </activity>
+        <activity
+            android:name=".SummaryActivity"
+            android:label="@string/title_activity_summary" >
+        </activity>
+        <activity
+            android:name=".LeaderBoard"
+            android:label="@string/title_activity_leader_board" >
+        </activity>
+        <activity
+            android:name=".RecordingScreen"
+            android:label="@string/title_activity_recording_screen" >
+        </activity>
     </application>
 
 </manifest>
