@@ -1,12 +1,13 @@
 package unsigned.atthacks.com.weride;
 
+import android.app.Activity;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import unsigned.atthacks.com.weride.R;
 
-public class RecordingScreen extends ActionBarActivity {
+public class RecordingScreen extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
