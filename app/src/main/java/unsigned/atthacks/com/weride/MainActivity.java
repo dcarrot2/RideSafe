@@ -1,18 +1,33 @@
 package unsigned.atthacks.com.weride;
 
 import android.app.Activity;
+import android.support.v4.app.FragmentActivity;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.ActionBar.Tab;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import unsigned.atthacks.com.weride.R;
 
-public class MainActivity extends Activity {
+public class MainActivity extends ActionBarActivity {
+
+    private ActionBar actionBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        actionBar = getSupportActionBar();
+
+        ActionBar.Tab tab1 = actionBar.newTab();
+
+        tab1.setText("Plot Route");
+
+        actionBar.addTab(tab1);
+
+
     }
 
 
