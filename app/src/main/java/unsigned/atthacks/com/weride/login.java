@@ -29,7 +29,7 @@ public class login extends Activity {
         TextView titleTxt = (TextView) findViewById(R.id.ridr);
 
         // Loading Font Face
-        Typeface riderTitle = Typeface.createFromAsset(getAssets(), "fonts/Airstream.ttf");
+        Typeface riderTitle = Typeface.createFromAsset(getAssets(), "fonts/PlayfairDisplay-Black.otf");
 
         titleTxt.setTypeface(riderTitle);
 
