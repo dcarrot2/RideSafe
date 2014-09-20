@@ -1,6 +1,7 @@
 package unsigned.atthacks.com.weride;
 
 import android.app.Activity;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -22,34 +23,28 @@ import android.util.Log;
 import org.w3c.dom.Text;
 
 
-public class login extends Activity {
+public class login extends FragmentActivity {
 
     private ImageButton login;
+    private LoginFragment loginFragment;
+    private static final String TAG = "LoginFragment";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
 
-        Session.openActiveSession(this, true, new Session.StatusCallback() {
-            @Override
-            public void call(Session session, SessionState state, Exception exception) {
+        if(savedInstanceState == null) {
 
-                if(session.isOpened()){
+            loginFragment = new LoginFragment();
+            getSupportFragmentManager()
+                    .beginTransaction().add(android.R.id.content, loginFragment)
+                    .commit();
 
-                    Request.newMeRequest(session, new Request.GraphUserCallback() {
-                        @Override
-                        public void onCompleted(GraphUser user, Response response) {
-                            if(user != null){
-                                Log.i("SUCESSS", "Success" + user.getName());
-                            }
-                        }
-                    }).executeAsync();
-                }
-
-            }
-        });
+        } else {
+            loginFragment = (LoginFragment) getSupportFragmentManager()
+                    .findFragmentById(android.R.id.content);
+        }
 
         // start Facebook login
 
