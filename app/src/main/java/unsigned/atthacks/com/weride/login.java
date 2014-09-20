@@ -28,8 +28,6 @@ public class login extends ActionBarActivity {
 
             }
         });
-
-
     }
 
 
@@ -51,4 +49,5 @@ public class login extends ActionBarActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
 }
