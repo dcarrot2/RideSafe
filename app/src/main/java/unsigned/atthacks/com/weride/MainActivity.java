@@ -23,6 +23,7 @@ public class MainActivity extends FragmentActivity{
     private TabsPagerAdapter mAdapter;
     private ViewPager viewPager;
     private Button startRoute;
+    private ActionBar actionBar;
 
     private String[] tabs = {"Track Route", "Challenge"};
 
@@ -39,21 +40,19 @@ public class MainActivity extends FragmentActivity{
 
         viewPager.setAdapter(mAdapter);
 
+        getActionBar().setTitle("Ridr");
+
         //actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD)
 
 
 
 
 
-        startRoute = (Button) findViewById(R.id.startRoute);
+        //startRoute = (Button) findViewById(R.id.startRoute);
 
-        startRoute.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(startRoute.getContext(), RecordingScreen.class);
-                startActivity(intent);
-            }
-        });
+
+
+
     }
 
 

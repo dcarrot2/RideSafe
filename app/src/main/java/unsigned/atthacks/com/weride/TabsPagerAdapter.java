@@ -15,17 +15,21 @@ public class TabsPagerAdapter extends FragmentPagerAdapter {
     }
     @Override
     public Fragment getItem(int i) {
-        switch (i) {
-            case 0:
-                return new ForecastFragment();
-
+        Fragment fragment = null;
+        if(i == 0)
+        {
+            fragment = new ForecastFragment();
         }
-        return null;
+        if(i == 1){
+            fragment = new ChallengesFragment();
+        }
+
+        return fragment;
     }
 
     @Override
     public int getCount() {
-        return 1;
+        return 2;
     }
 
     @Override
