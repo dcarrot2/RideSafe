@@ -4,14 +4,33 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.content.Intent;
+import android.graphics.Typeface;
+import android.widget.TextView;
 import unsigned.atthacks.com.weride.R;
 
 public class MainActivity extends ActionBarActivity {
+
+    private Button startRoute;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        startRoute = (Button) findViewById(R.id.startRoute);
+
+        startRoute.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(startRoute.getContext(), RecordingScreen.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 
 
