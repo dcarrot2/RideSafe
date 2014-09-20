@@ -12,6 +12,7 @@ public class login extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
     }
 
 
@@ -33,4 +34,5 @@ public class login extends ActionBarActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
 }
